@@ -1,0 +1,416 @@
+/* 
+Theme Name: Home
+Theme URI: www.Seo-site-4.com
+Description: wp template
+Author: Tanya
+ */
+
+@font-face {
+	font-family: 'Ubuntu700';
+	font-display: swap;
+	src: url(./assets/fonts/Ubuntu-Bold.ttf) format("truetype"),
+	url(./assets/fonts/Ubuntu-Bold.woff2) format("woff2");
+	font-weight: 700;
+}
+@font-face {
+	font-family: 'Ubuntu500';
+	font-display: swap;
+	src: url(./assets/fonts/Ubuntu-Medium.ttf) format("truetype"),
+	url(./assets/fonts/Ubuntu-Medium.woff2) format("woff2");
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'Ubuntu400';
+	font-display: swap;
+	src: url(./assets/fonts/Ubuntu-Regular.ttf) format("truetype"),
+	url(./assets/fonts/Ubuntu-Regular.woff2) format("woff2");
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'Ubuntu300';
+	font-display: swap;
+	src: url(./assets/fonts/Ubuntu-Light.ttf) format("truetype"),
+	url(./assets/fonts/Ubuntu-Light.woff2) format("woff2");
+	font-weight: 300;
+}
+@font-face {
+	font-family: 'Ubuntu300Italic';
+	font-display: swap;
+	src: url(./assets/fonts/Ubuntu-LightItalic.ttf) format("truetype"),
+	url(./assets/fonts/Ubuntu-LightItalic.woff2) format("woff2");
+	font-weight: 300;
+}
+@font-face {
+	font-family: 'Almarai400';
+	font-display: swap;
+	src: url(./assets/fonts/Almarai-Regular.ttf) format("truetype"),
+	url(./assets/fonts/Almarai-Regular.woff2) format("woff2");
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'Almarai700';
+	font-display: swap;
+	src: url(./assets/fonts/Almarai-Bold.ttf) format("truetype"),
+	url(./assets/fonts/Almarai-Bold.woff2) format("woff2");
+	font-weight: 700;
+}
+@font-face {
+	font-family: 'Montserrat300';
+	font-display: swap;
+	src: url(./assets/fonts/Montserrat-Light.ttf) format("truetype"),
+	url(./assets/fonts/Montserrat-Light.woff2) format("woff2");
+	font-weight: 300;
+}
+
+:root
+
+
+*{
+	margin: 0;
+	box-sizing: border-box;
+}
+img{
+	width: 100%;
+}
+a {
+	text-decoration: none;
+}
+.bg{
+	background-color: #EEE5D6;
+}
+.header-padding{
+	padding: 30px 0;
+	border: 1px solid #BDBDBD;
+}
+.content{
+	max-width: 1818px;
+	padding: 0 10px;
+}
+.header-menu__unit-link{
+	font-family: 'Ubuntu300';
+	font-size: 20px;
+	line-height: 32px;
+	color: #4f4f4f;
+}
+.header__search-input{
+	font-family: 'Ubuntu300';
+	font-size: 20px;
+	line-height: 32px;
+	color: #828282;
+	padding: 12px 15px;
+	background: #E3DAC9;
+	border-radius: 6px;
+	border: none;
+	width: 100%;
+}
+.header__search-input:hover{
+	border: none;
+}
+.header__search-input-wrapper{
+	width: 100%;
+	position: relative;
+}
+.header__search-input-wrapper::after{
+	position: absolute;
+	content: '';
+	background-image: url(./assets/imgs/search.svg);
+	right: 17px;
+	top: 17px;
+	width: 22px;
+	height: 22px;
+}
+.header-grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr 522px;
+	align-items: center;
+}
+.header__logo-wrapper{
+	max-width: 162px;
+	justify-self: left;
+}
+.header__search-wrapper{
+	width: 466px;
+	justify-self: right;
+	/* margin-left: 60px; */
+}
+.header-menu{
+	display: grid;
+	grid-template-columns: minmax(74px, 114px) minmax(118px, 158px)  minmax(118px, 158px) minmax(70px, 110px);
+}
+.header__menu-wrapper{
+	max-width: 488px;
+	justify-self: right;
+}
+.header-menu__unit-wrapper{
+	justify-self: right;
+}
+
+.top-articles__padding{
+	padding: 40px 0;
+	border: 1px solid #BDBDBD;
+}
+.top-articles__date{
+	font-family: 'Ubuntu400';
+	font-size: 14px;
+	line-height: 19px;
+	color: #4f4f4f;
+}
+.top-articles__article-title{
+	font-family: 'Ubuntu500';
+	font-size: 24px;
+	line-height: 26px;
+	color: #4f4f4f;
+}
+.top-articles__article-title-wrapper{
+	max-width: 278px;
+	margin-top: 10px;
+}
+.top-articles__grid{
+	display: flex;
+	justify-content: space-between;
+}
+.top-articles__article-wrapper:not(:last-child){
+	margin-right: 30px;
+}
+
+.main-area__padding{
+	padding: 40px 0 162px 0;
+}
+.main-area__grid{
+	display: grid;
+	grid-template-columns: 1fr 278px;
+	grid-gap: 30px;
+}
+.main-area__grid > div:not(:nth-child(2)){
+	grid-column: 1/2;
+}
+.main-area__sidebar-block{
+	grid-column: 2/3;
+	grid-row: 1/7;
+}
+.main-area__big-article-title-link{
+	font-family: 'Almarai700';
+	font-size: 64px;
+	line-height: 71px;
+	color: #000;
+}
+.main-area__big-article-title-wrapper{
+	max-width: 894px;
+}
+.main-area__big-article-decor-element{
+	background-color: #000;
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+}
+.main-area__big-article-decor-wrapper{
+	display: flex;
+	justify-content: space-between;
+	width: 135px;
+}
+.main-area__big-article-date{
+	font-family: 'Ubuntu400';
+	font-size: 28px;
+	line-height: 42px;
+	color: #4f4f4f;
+	display: grid;
+	justify-items: right;
+}
+.main-area__big-article-date-day{
+	font-family: 'Ubuntu500';
+	font-size: 78px;
+	line-height: 86px;
+	color: #000;
+}
+.main-area__big-article-date-day-wrapper{
+	display: flex;
+	justify-content: right;
+}
+.main-area__big-article-img{
+	background-repeat: no-repeat;
+	max-width: 1202px;
+	height: 537px;
+	background-position: left top;
+	position: relative;
+	z-index: 2;
+}
+.main-area__big-article-img-wrapper{
+	max-width: 1510px;
+	height: 600px;
+	position: relative;
+	margin-top: 20px;
+}
+.main-area__big-article-img-wrapper::before{
+	position: absolute;
+	background-color: #000;
+	content: '';
+	width: 1356px;
+	height: 590px;
+	right: 0;
+	bottom: 0;
+}
+.main-area__big-article-img-wrapper::after{
+	position: absolute;
+	background-color: #333;
+	content: '';
+	width: 278px;
+	height: 350px;
+	right: 154px;
+	bottom: 25px;
+	z-index: 1;
+}
+.main-area__big-article-grid{
+	display: grid;
+	grid-template-columns: 1fr 278px;
+}
+.main-area__big-article-date-wrapper{
+	grid-column: 2/3;
+	grid-row: 2/3;
+	margin-top: 53px;
+}
+.main-area__big-article-decor-wrapper{
+	grid-column: 2/3;
+	grid-row: 1/2;
+	justify-self: right;
+}
+.main-area__big-article-title-wrapper{
+	grid-column: 1/2;
+	grid-row: 1/3;
+}
+.main-area__big-article-img-wrapper{
+	grid-column: 1/3;
+	grid-row: 3/5;
+}
+
+.main-area-sidebar__news-title-link{
+	font-family: 'Almarai700';
+	font-size: 28px;
+	line-height: 31px;
+	color: #4F4F4F;
+}
+.main-area-sidebar__news-title-wrapper{
+	border-bottom: 2px solid #4F4F4F;
+	padding-bottom: 10px;
+	margin-top: 10px;
+}
+.main-area-sidebar__news-date{
+	font-family: 'Ubuntu400';
+	font-size: 16px;
+	line-height: 21px;
+	color: #4f4f4f;
+}
+.main-area-sidebar__news-date-wrapper{
+	margin-top: 20px;
+}
+.main-area-sidebar__news-article-link{
+	font-family: 'Ubuntu400';
+	font-size: 18px;
+	line-height: 20px;
+	color: #333;
+}
+.main-area-sidebar__form-wrapper{
+	background-color: #D3DFD7;
+	border-radius: 10px;
+	padding: 20px;
+	margin-top: 40px;
+}
+.main-area-sidebar__form-title{
+	font-family: 'Almarai400';
+	font-size: 20px;
+	line-height: 26px;
+	color: #333;
+	text-align: center;
+}
+.main-area-sidebar__form-title-wrapper{
+	display: flex;
+	max-width: 239px;
+}
+.main-area-sidebar__form-input{
+	font-family: 'Ubuntu300';
+	font-size: 16px;
+	line-height: 18px;
+	color: #4f4f4f;
+	padding: 21px 15px;
+	border: 1px solid #828282;
+	border-radius: 5px;
+	background-color: transparent;
+	width: 100%;
+}
+.main-area-sidebar__form-input-wrapper{
+	margin-top: 20px;
+	max-width: 239px;
+}
+.main-area-sidebar__form-textarea{
+	font-family: 'Ubuntu300';
+	font-size: 16px;
+	line-height: 18px;
+	color: #4f4f4f;
+	padding: 21px 15px;
+	border: 1px solid #828282;
+	border-radius: 5px;
+	background-color: transparent;
+	resize: none;
+	width: 100%;
+}
+.main-area-sidebar__form-textarea-wrapper{
+	margin-top: 20px;
+	max-width: 239px;
+}
+.main-area-sidebar__form-btn{
+	font-family: 'Ubuntu400';
+	font-size: 22px;
+	line-height: 29px;
+	color: #fff;
+	display: inline-block;
+	padding: 20px 94px;
+	background: #282828;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+}
+.main-area-sidebar__form-btn-wrapper{
+	margin-top: 20px;
+}
+.label-grid{
+	display: grid;
+	grid-template-columns: 22px 197px;
+	align-items: center;
+	grid-gap:20px;
+}
+label{
+	font-family: 'Ubuntu400';
+	font-size: 14px;
+	line-height: 18px;
+	color: #4f4f4f;
+	cursor: pointer;
+}
+.main-area-sidebar__form-chekbox-input{
+	-webkit-animation: none;
+	-moz-animation: none;
+	appearance: none;
+}
+.main-area-sidebar__form-chekbox{
+	position: absolute;
+	background-color: transparent;
+	border: 1px solid #BDBCBC;
+	border-radius: 2px;
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+}
+.main-area-sidebar__form-chekbox-wrapper{
+	margin-top: 20px;
+}
+.main-area-sidebar__form-chekbox-input:checked + .main-area-sidebar__form-chekbox{
+	background-color: #27AE60;
+	background-image: url(./assets/imgs/bird.svg);
+	width: 22px;
+	height: 22px;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: center;
+}
+.main-area-sidebar__banners-wrapper{
+	margin-top: 40px;
+}
+
