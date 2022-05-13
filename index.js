@@ -8,4 +8,3 @@ burger.addEventListener('click', ()=> {
 	menu.classList.toggle('active')
 })
 
-console.log(thshyj)
