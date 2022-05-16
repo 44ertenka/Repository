@@ -61,6 +61,13 @@ Author: Tanya
       url(./assets/fonts/Montserrat-Light.woff2) format("woff2");
    font-weight: 300;
 }
+@font-face {
+   font-family: 'Montserrat400';
+   font-display: swap;
+   src: url(./assets/fonts/Montserrat-Regular.ttf) format("truetype"),
+      url(./assets/fonts/Montserrat-Regular.woff2) format("woff2");
+   font-weight: 400;
+}
 
 * {
    margin: 0;
@@ -1058,7 +1065,7 @@ label {
       padding: 33px 0 79px 0;
    }
    .footer-grid{
-      grid-template-columns: minmax(100px, 343px) minmax(60px, 90px) minmax(70px, 160px) minmax(100px, 344px);
+      grid-template-columns: minmax(100px, 343px) minmax(60px, 90px) minmax(70px, 227px) minmax(100px, 344px);
    }
    .footer__search-wrapper{
       width: 230px;
@@ -1830,6 +1837,7 @@ label {
 .subcat__articles-flx .article-wrapper:nth-child(n+19):nth-child(-n+22) .article-title-wrapper{
    margin-top: 30px;
 }
+
 @media only screen and (max-width:1024px){
    .subcat__padding{
       padding: 30px 0 15px 0;
@@ -1943,3 +1951,200 @@ label {
       font-size: 16px;
    }
 }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Thank you page~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.thankyou-padding{
+   padding: 110px 0 138px 0;
+}
+.thankyou__blackline{
+   background-color: #1e1e1e;
+   width: 100%;
+   height: 16px;
+}
+.thankyou__blackline-wrapper{
+   max-width: 1818px;
+}
+.thankyou__title{
+   font-family: 'Almarai700';
+   font-size: calc(68px + 9 * ((100vw - 1024px) / (1818 - 1024)));
+   line-height: 85px;
+   color: #000;
+   text-transform: uppercase;
+}
+.thankyou__title-wrapper{
+   margin-top: 20px;
+}
+.thankyou__txt{
+   font-family: 'Montserrat400';
+   font-size: calc(24px + 4 * ((100vw - 1024px) / (1818 - 1024)));
+   line-height: 39px;
+   color: #333;
+}
+.thankyou__txt-wrapper{
+   max-width: 586px;
+   margin-top: 20px;
+}
+.thankyou-error__btn-link{
+   font-family: 'Ubuntu400';
+   font-size: 22px;
+   line-height: 29px;
+   color: #fff;
+   display: inline-block;
+   padding: 20px 55px;
+   background-color: #282828;
+   border-radius: 5px;
+}
+.thankyou-error__btn-wrapper{
+   margin-top: 200px;
+}
+.thankyou-error__btn-link:hover{
+   background-color: #4D4D4D;
+}
+.thankyou-error__btn-link:active{
+   background-color: #151515;
+}
+.thankyou-error__btn-link:disabled{
+   background-color: #CDCDCD;
+}
+
+@media only screen and (max-width:1024px){
+   .thankyou-padding{
+      padding: 90px 0 199px 0;
+   }
+   .thankyou__title{
+      font-size: calc(52px + 16 * ((100vw - 375px) / (1024 - 375)));
+      line-height: 75px;
+   }
+   .thankyou__txt{
+      font-size: calc(18px + 6 * ((100vw - 375px) / (1024 - 375)));
+      line-height: 34px;
+   }
+   .thankyou__txt-wrapper{
+      max-width: 480px;
+   }
+   .thankyou-error__btn-wrapper{
+      margin-top: 120px;
+   }
+   .thankyou-error__btn-link{
+      padding: 20px 94px;
+   }
+}
+
+@media only screen and (max-width:640px){
+   .thankyou-padding{
+      padding: 60px 0 132px 0;
+   }
+   .thankyou__title{
+      line-height: 57px;
+   }
+   .thankyou__txt{
+      line-height: 25px;
+   }
+   .thankyou__txt-wrapper{
+      max-width: 343px;
+   }
+   .thankyou-error__btn-wrapper{
+      margin-top: 160px;
+   }
+   .thankyou-error__btn-link{
+      padding: 20px 42px;
+   }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Not Found page~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.notfound-padding{
+   padding: 90px 0 171px 0;
+}
+.notfound__404-number-4{
+   font-family: 'Ubuntu700';
+   font-size: calc(209px + 50 * ((100vw - 1024px) / (1818 - 1024)));
+   line-height: 285px;
+   color: #000;
+}
+.notfound__404-number-0{
+   font-family: 'Ubuntu300Italic';
+   font-size: calc(209px + 50 * ((100vw - 1024px) / (1818 - 1024)));
+   line-height: 285px;
+   color: #333;
+}
+.notfound__404-number-0-wrapper{
+   margin-right: 11px;
+}
+.notfound__404-wrapper{
+   display: flex;
+}
+.notfound__title{
+   font-family: 'Almarai700';
+   font-size: calc(66px + 11 * ((100vw - 1024px) / (1818 - 1024)));
+   line-height: 85px;
+   color: #000;
+   text-transform: uppercase;
+}
+.notfound__txt{
+   font-family: 'Montserrat300';
+   font-size: calc(24px + 4 * ((100vw - 1024px) / (1818 - 1024)));
+   line-height: 39px;
+   color: #4f4f4f;
+}
+.notfound__txt-wrapper{
+   max-width: 577px;
+   margin-top: 10px;
+}
+.notfound__btn-wrapper{
+   margin-top: 80px;
+}
+
+@media only screen and (max-width:1024px){
+   .notfound-padding{
+      padding: 94px 0 114px 0;
+   }
+   .notfound__404-number-4, .notfound__404-number-0{
+      font-size: calc(139px + 70 * ((100vw - 375px) / (1024 - 375)));
+   }
+   .notfound__404-number-4, .notfound__404-number-0{
+      line-height: 190px;
+   }
+   .notfound__title{
+      font-size: calc(36px + 30 * ((100vw - 375px) / (1024 - 375)));
+      line-height: 73px;
+   }
+   .notfound__txt{
+      font-size: calc(18px + 6 * ((100vw - 375px) / (1024 - 375)));
+      line-height: 34px;
+   }
+   .notfound__txt-wrapper{
+      max-width: 480px;
+   }
+   .notfound__btn-wrapper{
+      margin-top: 120px;
+   }
+}
+
+@media only screen and (max-width:640px){
+   .notfound-padding{
+      padding: 83px 0 179px 0;
+   }
+   .notfound__404-number-4, .notfound__404-number-0{
+      line-height: 150px;
+   }
+   .notfound__title{
+      font-size: 36px;
+      line-height: 40px;
+   }
+   .notfound__txt-wrapper{
+      max-width: 343px;
+      margin-top: 20px;
+   }
+   .notfound__txt{
+      font-size: 18px;
+      line-height: 25px;
+   }
+   .notfound__btn-wrapper{
+      margin-top: 20px;
+   }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Single Page page~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
